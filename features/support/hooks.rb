@@ -1,9 +1,8 @@
 Before do
-  # adjust local configuration like this
-  # @puppetcfg['confdir']  = File.join(File.dirname(__FILE__), '..', '..')
-  # @puppetcfg['manifest'] = File.join(@puppetcfg['confdir'], 'manifests', 'site.pp')
-  # @puppetcfg['modulepath']  = "/srv/puppet/modules:/srv/puppet/site-modules"
+  @puppetcfg['confdir']  = File.join(File.dirname(__FILE__), '..', '..')
+  @puppetcfg['manifest'] = File.join(@puppetcfg['confdir'], 'manifests', 'site.pp')
+  @puppetcfg['modulepath'] = File.join(@puppetcfg['confdir'], 'modules')
 
   # adjust facts like this
-  @facts['architecture'] = "i386"
+  @facts['architecture'] = "x86_64"
 end
