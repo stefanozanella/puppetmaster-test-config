@@ -1,5 +1,16 @@
 = What's this?
 This repository contains a complete puppet configuration tree, used to drive a +puppetstage+ test host.
-The test host is supposed to have *puppetmaster*, *cucumber-puppet* and *puppet-rspec* installed on it, and it's supposed to run for testing purposes only.
+The test host is supposed to have *puppetmaster*, *cucumber-puppet* and *puppet-rspec* installed on it, and it's supposed to run *locally* (i.e. not for managing configuration of other hosts) for testing purposes only.
 
 Tested codebase is my puppet's modules bundle, which can be found at https://github.com/stefanozanella/puppet-module-bundle .
+
+== Ok, but I'd like to use this for my tests...
+To use this repository to setup your own testing environment, simply follow these steps:
+	* Install a fresh host named *puppetstage*
+	* Install a fresh copy of puppetmaster
+	* +rm -rf /etc/puppet+
+	* +git clone git://github.com/stefanozanella/puppetmastr-test-config.git /etc/puppet+
+	* +cd /etc/puppet+
+	* +git submodule init && git submodule update+
+
+Then you can run the test suite on the configured host. If you want to use the repo as a base for your own test, obviously, do fork it and modify at your own pleasure.
