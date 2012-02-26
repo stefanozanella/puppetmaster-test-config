@@ -1,0 +1,5 @@
+= What's this?
+This repository contains a complete puppet configuration tree, used to drive a +puppetstage+ test host.
+The test host is supposed to have *puppetmaster*, *cucumber-puppet* and *puppet-rspec* installed on it, and it's supposed to run for testing purposes only.
+
+Tested codebase is my puppet's modules bundle, which can be found at https://github.com/stefanozanella/puppet-module-bundle .
